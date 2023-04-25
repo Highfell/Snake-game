@@ -11,9 +11,6 @@ DOWN = 270
 LEFT = 180
 RIGHT = 0
 
-
-
-
 class Snake:
 
     def __init__(self):
@@ -66,4 +63,11 @@ class Snake:
         if self.snake[0].heading() != LEFT:
             self.snake[0].setheading(RIGHT)
 
+    def reset(self):
+        for body in self.snake:
+            body.goto(1000, 1000)
+        del self.snake[:]
+        self.snake.clear()
+
+    
 

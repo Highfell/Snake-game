@@ -26,6 +26,12 @@ class Scoreboard(Turtle):
             self.update_scoreboard()
     
         def game_over(self):
-            self.goto(0, 0)
-            self.write("GAME OVER", align=ALIGNMENT, font=FONT)
+            self.goto(0, 100)
+            self.write("GAME OVER", align='center', font=FONT)
+
+        def reset_scoreboard(self):
+            self.score = 0
+            self.clear()
+            self.goto(0, 400)
+            self.update_scoreboard()
 
